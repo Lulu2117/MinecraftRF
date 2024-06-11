@@ -2,15 +2,13 @@
 import torch
 import torch.nn as nn
 
-class EVKNeuralNetwork(nn.Module):
+class MCNeuralNetwork(nn.Module):
 
     def __init__(self):
         super().__init__()
 
         self.model = nn.Sequential(
-            nn.Linear(49152,25000),
-            nn.Sigmoid(),
-            nn.Linear(25000,5000),
+            nn.Linear(12288,5000),
             nn.Sigmoid(),
             nn.Linear(5000,200),
             nn.Sigmoid(),
